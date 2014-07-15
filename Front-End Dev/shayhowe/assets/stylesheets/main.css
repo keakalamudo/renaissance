@@ -110,3 +110,8 @@ h1, h3, h4, h5, p {
 .col-2-3{
   width: 66.66%;
 }
+
+.col-1-3, .col-2-3{
+  display: inline-block;
+  vertical-align: top;
+}
