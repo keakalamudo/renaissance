@@ -67,6 +67,11 @@ table {
   width: 960px;
 }
 
+.container, .grid{
+  margin: 0 auto;
+  width: 960px;
+}
+
 /*
   ========================================
   Typography
