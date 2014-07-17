@@ -214,7 +214,7 @@ a{
 }
 
 .primary-nav{
-  font-size: 14px; 
+  font-size: 14px;
   font-weight: 400;
 }
 /*
@@ -224,8 +224,11 @@ a{
 */
 .primary-footer small{
   float: left;
+  font-weight: 400;
 }
 .primary-footer{
+  color: #648880;
+  font-size: 14px;
   padding-top: 44px;
   padding-bottom: 44px;
 }
