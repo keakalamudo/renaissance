@@ -223,8 +223,13 @@ p a{
 
 }
 .btn-alt {
-  border: 1px solid #dfe2e5;
+  border: 1px solid #fff;
   padding: 10px 30px;
+}
+
+.btn-alt:hover {
+  background: #fff;
+  color: #648880;
 }
 
 /*
