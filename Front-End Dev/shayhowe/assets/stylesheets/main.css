@@ -129,11 +129,13 @@ body{
 
 .row{
   background: #fff;
-  min-width: 960px;
   padding: 66px 0 44px 0;
-
 }
 
+.row,
+.row-alt{
+  min-width: 960px;
+}
 /*
   ========================================
   Typography
