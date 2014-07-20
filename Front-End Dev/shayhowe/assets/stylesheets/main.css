@@ -348,3 +348,17 @@ p a{
 .teaser a:hover h3{
   color: #a9b2b9;
 }
+
+/*
+  ========================================
+  Speakers
+  ========================================
+*/
+
+.speaker-info{
+  border: 1px solid #dfe3e5;
+  border-radius: 5px;
+  margin-top: 88px;
+  padding: 22px 0;
+  text-align: center;
+}
