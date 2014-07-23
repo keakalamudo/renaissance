@@ -429,4 +429,24 @@ textarea{
 .register-group input,
 .register-group select,
 .register-group textarea{
+  border: 1px soild #c6c9cc;
+  border-radius: 5px;
+  color: #888;
+  display: block;
+  margin: 5px 0 27px 0;
+  padding: 5px 8px;
+}
+
+.register-group input,
+.register-group textarea{
+  width: 100%;
+}
+
+.register-group select{
+  height: 34px;
+  width: 60px;
+}
+
+.register-group textarea{
+  height: 78px;
 }
