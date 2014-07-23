@@ -280,6 +280,16 @@ p a{
   color: #648880;
 }
 
+.btn-default{
+  border: 0;
+  background: #648880;
+  padding: 11px 30px;
+  font-size: 14px;  
+}
+
+.btn-default:hover{
+  backgroud: #77a198;
+}
 /*
   ========================================
   Primary header
