@@ -528,3 +528,15 @@ tbody td:only-of-type{
   padding-left: 0;
   padding-right: 0;
 }
+
+table a{
+  color: #888;
+}
+
+table h4{
+  margin-bottom: 0;
+}
+
+.schedule-offset{
+  color: #a9b2b9;
+}
