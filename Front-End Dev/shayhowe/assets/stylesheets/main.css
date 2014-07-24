@@ -284,7 +284,7 @@ p a{
   border: 0;
   background: #648880;
   padding: 11px 30px;
-  font-size: 14px;  
+  font-size: 14px;
 }
 
 .btn-default:hover{
@@ -459,4 +459,20 @@ textarea{
 
 .register-group textarea{
   height: 78px;
+}
+
+/*
+  ========================================
+  Schedule
+  ========================================
+*/
+
+table{
+  margin-bottom: 44px;
+  width: 100%;
+}
+
+
+table:last-child{
+  margin-bottom: 0;
 }
