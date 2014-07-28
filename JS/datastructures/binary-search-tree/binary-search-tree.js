@@ -37,7 +37,26 @@ BinarySearchTree.prototype = {
     contains: function(value){
         var found   = false,
             current = this._root
-        //
+
+        //Making sure there is still a node to check
+        while(!found && current){
+
+            //if the value is less then the value of current node's then go left
+            if(value < current.value){
+                current = current.left;
+            }
+
+            //if the value is more then the value of current node's then go right
+            else if(value > current.value){
+                current = current.right;
+            }
+
+            //The values are equal which means that you have found it!
+            else{
+                found=true;
+            }
+
+        }return found;
     },
     remove: function(value){},
     size: function(){},
