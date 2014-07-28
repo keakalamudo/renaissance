@@ -99,9 +99,30 @@ BinarySearchTree.prototype = {
 
         }return found;
     },
-    remove: function(value){},
+    remove: function(value){
+
+    },
     size: function(){},
     toArray: function(){},
-    toString: function(){}
+    toString: function(){},
+    traverse: function(process){
+        function inOrder(node){
+            if (node){
+                //traverse the left subtree
+                if(node.left !==null){
+                    inOrder(node.left);
+                }
+                //call the process method on this node
+                process.call(this, node);
+                //traverse the right subtree
+                if(node.right !==null){
+                    inOrder(node.right);
+                }
+            }
+        }
+        //start with the root
+        inOrder(this._root);
+
+    }
 
 };
