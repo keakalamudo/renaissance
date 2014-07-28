@@ -21,8 +21,24 @@ function BinarySearchTree(){
 BinarySearchTree.prototype = {
     //restore constructor
     constructor: BinarySearchTree,
-    add: function(value){},
-    contains: function(value){},
+
+    //Private Members:
+    //---------------------------------------
+    add: function(value){
+        //Create a new object item, to place data in.
+        var node ={
+            value: value,
+            left: null,
+            right: null
+         },current
+
+    },
+
+    contains: function(value){
+        var found   = false,
+            current = this._root
+        //
+    },
     remove: function(value){},
     size: function(){},
     toArray: function(){},
