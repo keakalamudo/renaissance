@@ -1,10 +1,31 @@
 /**
- * Created by Kaymuda on 7/28/14.
- */
-/**
  * This is a binary search tree implementation in JavaScript.
- * This implementation does not contain any duplication.
+ * This implementation does not allow for duplicate values to entered into
+ * the tree.
  *
- * The binary search tree is a fundamental data structure in Computer Science.
+ * @BinarySearchTree
+ * @constructor
  *
  */
+
+function BinarySearchTree(){
+    /**
+     * @property _root
+     * @type Object
+     * @private
+     */
+    this._root=null;
+
+}
+
+BinarySearchTree.prototype = {
+    //restore constructor
+    constructor: BinarySearchTree,
+    add: function(value){},
+    contains: function(value){},
+    remove: function(value){},
+    size: function(){},
+    toArray: function(){},
+    toString: function(){}
+
+};
