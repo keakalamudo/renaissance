@@ -30,7 +30,48 @@ BinarySearchTree.prototype = {
             value: value,
             left: null,
             right: null
-         },current
+         },
+
+         //This will be used to traverse the structure
+         current;
+
+        //This is incase there are no items in the tree.
+        if(this._root === null){
+            this._root = node;
+        }else{
+            current = this._root;
+            while(true){
+                //if the value is less then the value of current node's then go left
+                if(value < current.value){
+                    current = current.left;
+
+                    //if there is no left then the new value belong there.
+                    if (current.left === null){
+                        current.left = node;
+                        break;
+                    }else{
+                        current = current.left;
+                    }
+                }
+
+                //if the value is more then the value of current node's then go right
+                else if(value > current.value){
+                    current = current.right;
+                    //if there's no right, then the the new value belongs here.
+                    if (current.right === null){
+                        current.right = node;
+                        break;
+                    }else{
+                        current = current.right;
+                    }
+                }
+                //if the new value is equal to the current one, break
+                else{
+                    break;
+                }
+
+            }
+        }
 
     },
 
