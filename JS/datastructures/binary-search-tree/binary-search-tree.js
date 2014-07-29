@@ -140,11 +140,44 @@ BinarySearchTree.prototype = {
                     case 1:
                         this._root = (current.right === null ? current.left : current.right);
                         break;
+                    case 2:
+                        //todo
+                    //no default
+
 
                 }
+            //non-root values.
+            }else{
+                switch(childCount){
+                    //No children means remove the parent.
+                    case 0:
+                        //If the current value  is less than the parent's value null left pointer.
+                        if (current.value < parent.value){
+                            parent.left = null;
+                        //If the current value  is greater than the parent's value null right pointer.
+                        }else{
+                            parent.right = null;
+                        }
+                        break;
+
+                    //One parent means reassign to parent.
+                    case 1:
+                        //If the current value is less than its parent's reset the left pointer.
+                        if(current.value < parent.value){
+                            parent.left= (current.left ===  null ? current.right : current.left);
+                        //If the current value is less than its parent's reset the left pointer.
+                        }else{
+                            parent.right= (current.left ===  null ? current.right : current.left);
+                        }
+                        break;
+                    //Two children.
+                    case 2:
+                        //TODO
+                    //no default
+                }
+
             }
         }
-
 
     },
     size: function(){
