@@ -125,7 +125,24 @@ BinarySearchTree.prototype = {
         }
         //Proceed only if the node was found.
         if(found){
-            //continue
+            //To figure out how many children
+            childCount =    (current.left !== null ? 1:0)+
+                            (curent.right !== null ? 1:0);
+
+            //In case the value is at root.
+            if (current === this._root){
+                switch(childCount){
+                    //Erase the root since it has no children.
+                    case 0:
+                        this._root = null;
+                        break;
+                    //One child, use one as root.
+                    case 1:
+                        this._root = (current.right === null ? current.left : current.right);
+                        break;
+
+                }
+            }
         }
 
 
