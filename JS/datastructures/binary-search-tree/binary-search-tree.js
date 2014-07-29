@@ -175,10 +175,8 @@ BinarySearchTree.prototype = {
                         //TODO
                     //no default
                 }
-
             }
         }
-
     },
     size: function(){
         var length = 0;
