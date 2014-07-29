@@ -102,7 +102,12 @@ BinarySearchTree.prototype = {
     remove: function(value){
 
     },
-    size: function(){},
+    size: function(){
+        var length = 0;
+        this.traverse(function(node){
+            length++;
+        });
+    },
     toArray: function(){},
     toString: function(){},
     traverse: function(process){
