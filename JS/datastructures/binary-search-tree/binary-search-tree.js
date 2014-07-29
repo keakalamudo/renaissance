@@ -107,9 +107,19 @@ BinarySearchTree.prototype = {
         this.traverse(function(node){
             length++;
         });
+        return length;
     },
-    toArray: function(){},
-    toString: function(){},
+    toArray: function(){
+        var result =[];
+
+        this.traverse(function(node){
+            result.push(node.value);
+        });
+        return result;
+    },
+    toString: function(){
+        return this.toArray().toString();
+    },
     traverse: function(process){
         function inOrder(node){
             if (node){
