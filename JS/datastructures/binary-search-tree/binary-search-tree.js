@@ -100,6 +100,34 @@ BinarySearchTree.prototype = {
         }return found;
     },
     remove: function(value){
+        var found       = false;
+            parent      = null;
+            current     = this._root,
+            childCount,
+            replacement,
+            replacementParent;
+
+        //This makes sure that there is a node to search.
+        while(!found && current){
+
+            //If the value is less than the current value go left.
+            if(value < current.value){
+                parent  = current;
+                current = current.left;
+
+            //If the value is less than the current value go left.
+            }else if(value > current.value){
+                parent  = current;
+                current = current.right;
+            }else{
+                found = true;
+            }
+        }
+        //Proceed only if the node was found.
+        if(found){
+            //continue
+        }
+
 
     },
     size: function(){
