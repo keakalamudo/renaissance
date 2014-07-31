@@ -161,7 +161,7 @@ BinarySearchTree.prototype = {
                             //Assign the children
                             replacement.right = this._root.right;
                         }
-                        //Official Assigning of the new root. 
+                        //Official Assigning of the new root.
                         this._root = replacement;
 
                     //no default
@@ -192,7 +192,16 @@ BinarySearchTree.prototype = {
                         break;
                     //Two children.
                     case 2:
-                        //TODO
+                        //resetting pointers for new traversal
+                        replacement = current.left;
+                        replacementParent = current;
+
+                        //find the right most node.
+                        while(replacement.right !== null){
+                            replacementParent = replacement;
+                            replacement = replacement.right;
+                        }
+                        
                     //no default
                 }
             }
