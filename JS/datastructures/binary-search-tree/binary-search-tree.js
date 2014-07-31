@@ -149,8 +149,22 @@ BinarySearchTree.prototype = {
                             replacementParent = replacement;
                             replacement = replacement.right;
                         }
+                        //if its not the first node on the left.
+                        if(replacementParent !== left){
+                            //Remove the new root from its previous position.
+                            replacementParent.right = replacement.left;
 
+                            //Assign the new root all of the old root's children.
+                            replacement.right = this._root.right;
+                            replacement.left  = this._root.length;
+                        }else {
+                            //Assign the children
+                            replacement.right = this._root.right;
+                        }
+                        //Official Assigning of the new root. 
+                        this._root = replacement;
 
+                    //no default
                 }
             //non-root values.
             }else{
