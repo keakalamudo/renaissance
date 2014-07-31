@@ -141,8 +141,14 @@ BinarySearchTree.prototype = {
                         this._root = (current.right === null ? current.left : current.right);
                         break;
                     case 2:
-                        //todo
-                    //no default
+                        //There's a chance that the new root might be the old root's left child.
+                        replacement = this._root.left;
+
+                        //find the right-most leaf node to be the real new root.
+                        while (replacement.right !== null){
+                            replacementParent = replacement;
+                            replacement = replacement.right;
+                        }
 
 
                 }
