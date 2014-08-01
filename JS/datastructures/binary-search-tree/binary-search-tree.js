@@ -201,7 +201,19 @@ BinarySearchTree.prototype = {
                             replacementParent = replacement;
                             replacement = replacement.right;
                         }
-                        
+
+                        replacementParent.right = replacement.left;
+
+                        //assign children to the replacement.
+                        replacement.right  = current.right;
+                        replacement.left   = current.left;
+
+                        //place the replacement in the right spot
+                        if(current.value < parent.value){
+                            parent.left = replacement;
+                        }else{
+                            parent.right = replacement;
+                        }
                     //no default
                 }
             }
