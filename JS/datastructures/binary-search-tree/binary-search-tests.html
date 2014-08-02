@@ -69,7 +69,34 @@
                 assert.areEqual(1, this.tree.size(), "Tree should have one item.");
             }
         }));
+        //-------------------------------------------------------------------------
+        // Test Case for contains()
+        //-------------------------------------------------------------------------
 
+        suite.add(new YAHOO.tool.TestCase({
+
+            name : "contains() Tests",
+
+            setUp: function(){
+                this.tree = new BinarySearchTree();
+            },
+
+            tearDown: function(){
+                delete this.tree;
+            },
+
+            //---------------------------------------------------------------------
+            // Tests
+            //---------------------------------------------------------------------
+
+            testContains: function(){
+                this.tree.add(5);
+
+                assert.isTrue(this.tree.contains(5));
+                assert.isFalse(this.tree.contains(10));
+
+            }
+        }));
 
 </script>
 
