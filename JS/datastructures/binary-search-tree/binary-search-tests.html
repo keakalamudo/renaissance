@@ -98,6 +98,68 @@
             }
         }));
 
+        //-------------------------------------------------------------------------
+        // Test Case for removing values
+        //-------------------------------------------------------------------------
+
+        suite.add(new YAHOO.tool.TestCase({
+
+            name : "remove() Tests",
+
+            setUp: function(){
+                this.tree = new BinarySearchTree();
+                this.tree.add(5);
+                this.tree.add(10);
+                this.tree.add(6);
+            },
+
+            tearDown: function(){
+                delete this.tree;
+            },
+
+            //---------------------------------------------------------------------
+            // Tests
+            //---------------------------------------------------------------------
+
+            testRemoveFirstItem: function(){
+                this.tree.remove(5);
+                assert.areEqual(2, this.tree.size(), "There should only be two items left.");
+                assert.areEqual(10, this.tree._root.value, "Root value should now be 10.");
+                assert.isFalse(this.tree.contains(5));
+            },
+
+            testRemoveFirstItemToo: function(){
+                this.tree.remove(10);
+                this.tree.remove(5);
+                assert.areEqual(1, this.tree.size(), "There should only be one item left.");
+                assert.areEqual(6, this.tree._root.value, "Root value should now be 6.");
+                assert.isFalse(this.tree.contains(5));
+                assert.isFalse(this.tree.contains(10));
+            },
+
+            testRemoveMiddleItem: function(){
+                this.tree.remove(10);
+                assert.areEqual(2, this.tree.size(), "There should only be two items left.");
+                assert.isFalse(this.tree.contains(10));
+            },
+
+            testRemoveLastItem: function(){
+                this.tree.remove(6);
+                assert.areEqual(2, this.tree.size(), "There should only be two items left.");
+                assert.isFalse(this.tree.contains(6));
+            },
+
+            testRemoveLastAll: function(){
+                this.tree.remove(6);
+                this.tree.remove(5);
+                this.tree.remove(10);
+                assert.areEqual(0, this.tree.size(), "There should only be two items left.");
+                assert.isFalse(this.tree.contains(6));
+                assert.isFalse(this.tree.contains(5));
+                assert.isFalse(this.tree.contains(10));
+            }
+        }));
+
 </script>
 
 </body>
