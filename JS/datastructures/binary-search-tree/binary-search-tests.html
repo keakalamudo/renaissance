@@ -176,6 +176,57 @@
                 delete this.tree;
             },
 
+            //---------------------------------------------------------------------
+            // Tests
+            //---------------------------------------------------------------------
+
+            testToArrayForEmptyList: function(){
+                var value = this.tree.toArray();
+                assert.isInstanceOf(Array, value, "Value should be an array.");
+                assert.areEqual(0, value.length, "Array should be empty.");
+            },
+
+            testToArrayForOneItemList: function(){
+                this.tree.add(5);
+                var value = this.tree.toArray();
+                assert.isInstanceOf(Array, value, "Value should be an array.");
+                assert.areEqual(1, value.length, "Array should have 1 item.");
+                assert.areEqual(5, value[0], "The only item should be 5.");
+            },
+
+            testToArrayForTwoItemList: function(){
+                this.tree.add(5);
+                this.tree.add(10);
+                var value = this.tree.toArray();
+                assert.isInstanceOf(Array, value, "Value should be an array.");
+                assert.areEqual(2, value.length, "Array should have 2 items.");
+                assert.areEqual(5, value[0], "The first item should be 5.");
+                assert.areEqual(10, value[1], "The second item should be 10.");
+            },
+
+            testToArrayForMultipleItems: function(){
+                this.tree.add(55);
+                this.tree.add(10);
+                this.tree.add(29);
+                this.tree.add(40);
+                this.tree.add(10);
+                this.tree.add(5);
+                this.tree.add(16);
+                this.tree.add(25);
+
+                var value = this.tree.toArray();
+                assert.isInstanceOf(Array, value, "Value should be an array.");
+                assert.areEqual(7, value.length, "Array should have 7 items.");
+                YAHOO.util.ArrayAssert.itemsAreEqual([5, 10, 16, 25, 29, 40, 55], value);
+
+
+            }
+
+
+        }));
+
+        //return it
+        return suite;
 
 </script>
 
