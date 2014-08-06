@@ -226,10 +226,19 @@
         }));
 
         //return it
-        return suite;
+        return suite;})();
+
+    (function (){
+        //create the logger
+        var logger = new YAHOO.tool.TestLogger();
+
+        //add the tests
+        YAHOO.tool.TestRunner.add(YAHOO.test.BinarySearchTree);
+        YAHOO.tool.TestRunner.run();
+
+    })();
+
 
 </script>
-
 </body>
 </html>
-
