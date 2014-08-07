@@ -92,6 +92,9 @@ LinkedList.prototype = {
 
     },
     size: function(){
+        return  this._length;
+    },
+    toArray:function(){
         
     }
 };
