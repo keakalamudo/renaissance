@@ -49,4 +49,8 @@ LinkedList.prototype = {
         }
         this._length++;
     },
+
+    item:function(index){
+
+    }
 };
