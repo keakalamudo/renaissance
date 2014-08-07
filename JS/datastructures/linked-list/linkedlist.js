@@ -90,5 +90,8 @@ LinkedList.prototype = {
             return null;
         }
 
+    },
+    size: function(){
+        
     }
 };
