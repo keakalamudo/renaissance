@@ -64,6 +64,15 @@ LinkedList.prototype = {
         }
     },
     remove:function(index){
+        if(index > -1 && index < this.length){
+            var current = this._head,
+                previous,
+                i =0;
+
+            //special case: removing first item
+            
+
+        }
 
     }
 };
