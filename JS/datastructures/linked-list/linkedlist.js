@@ -70,8 +70,24 @@ LinkedList.prototype = {
                 i =0;
 
             //special case: removing first item
-            
+            if(index === 0) {
+                this._head = current.next;
+            } else {
+                //looking for the current location
+                while(i++ < index){
+                    previous = current;
+                    current = current.next;
+                }
+                //skip over item to remove it.
+                previous.next = current.next;
+            }
+            //decrement the length
+            this._length--;
 
+            //return the value
+            return current.data;
+        } else{
+            return null;
         }
 
     }
