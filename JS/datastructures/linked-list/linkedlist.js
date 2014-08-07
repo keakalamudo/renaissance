@@ -26,3 +26,9 @@ function LinkedList() {
      */
     this._head = null;
 }
+
+LinkedList.prototype = {
+    add:function(data){
+        
+    }
+}
