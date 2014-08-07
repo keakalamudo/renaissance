@@ -51,6 +51,17 @@ LinkedList.prototype = {
     },
 
     item:function(index){
+        //check for out-of-bounds values
+        if(index > -1 && index  this.length){
+            var current = this._head;
+            i = 0;
 
-    }
+            while(i++ < index){
+                current = current.next;
+            }
+            return current.data;
+        } else {
+            return null;
+        }
+    },
 };
