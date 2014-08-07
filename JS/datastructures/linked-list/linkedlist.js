@@ -29,6 +29,24 @@ function LinkedList() {
 
 LinkedList.prototype = {
     add:function(data){
-        
-    }
-}
+        //create a new node
+        var node = {
+            data: data,
+            next: null
+            },
+            //Use to traverse the structure.
+            current;
+
+        //special case: no items in the list yet.
+        if(this._head === null){
+            this._head = node;
+        } else {
+            current = this._head;
+            while(current.next){
+                current = current.next;
+            }
+            current.next = node;
+        }
+        this._length++;
+    },
+};
