@@ -104,5 +104,7 @@ LinkedList.prototype = {
         }
         return result;
     },
-    
+    toString:function(){
+        return this.toArray().toString();
+    }
 };
