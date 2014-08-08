@@ -95,6 +95,14 @@ LinkedList.prototype = {
         return  this._length;
     },
     toArray:function(){
-        
-    }
+        var result = [],
+            current = this._head;
+
+        while(current){
+            result.push(current.data);
+            current = current.next;
+        }
+        return result;
+    },
+    
 };
