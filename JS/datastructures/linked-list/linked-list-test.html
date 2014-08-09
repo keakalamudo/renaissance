@@ -39,6 +39,28 @@
                     delete this.list;
                 },
 
+                //---------------------------------------------------------------------
+                // Tests
+                //---------------------------------------------------------------------
+
+                testAddSingle: function(){
+                    this.list.add("Hi");
+
+                    assert.areEqual(1, this.list.size(), "List should have one item.");
+                    assert.areEqual("Hi", this.list._head.data, "First item should have data of 'Hi'.");
+                    assert.isNull(this.list._head.next, "The next pointer of the first item should be null.");
+                },
+
+                testAddMultiple: function(){
+                    this.list.add("Hi");
+                    this.list.add("Yo");
+
+                    assert.areEqual(2, this.list.size(), "List should have one item.");
+                    assert.areEqual("Hi", this.list._head.data, "First item should have data of 'Hi'.");
+                    assert.isNull(this.list._head.next.next, "The next pointer of the second item should be null.");
+                }
+            }));
+
 
             })
 
