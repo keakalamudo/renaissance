@@ -22,7 +22,25 @@
 
             var suite = new YAHOO.tool.TestSuite("Linked List Tests");
 
-        })
+
+            //-------------------------------------------------------------------------
+            // Test Case for adding
+            //-------------------------------------------------------------------------
+
+            suite.add(new YAHOO.tool.TestCase({
+
+                name : "add() Tests",
+
+                setUp: function(){
+                    this.list = new LinkedList();
+                },
+
+                tearDown: function(){
+                    delete this.list;
+                },
+
+
+            })
 
 
     </script>
