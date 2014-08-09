@@ -12,8 +12,18 @@
 <body>
     <h1>Linked List Test</h1>
     <script type="text/javascript">
-        Yahoo.namespace("test");
-        Yahoo.test.LinkedList = 
+        YAHOO.namespace("test");
+        YAHOO.test.LinkedList = (function () {
+            var assert = YAHOO.util.Assert;
+
+            //-------------------------------------------------------------------------
+            // Base Test Suite
+            //-------------------------------------------------------------------------
+
+            var suite = new YAHOO.tool.TestSuite("Linked List Tests");
+
+        })
+
 
     </script>
 </body>
