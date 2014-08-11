@@ -60,6 +60,24 @@
                     assert.isNull(this.list._head.next.next, "The next pointer of the second item should be null.");
                 }
             }));
+            //-------------------------------------------------------------------------
+            // Test Case for retrieving values
+            //-------------------------------------------------------------------------
+
+            suite.add(new YAHOO.tool.TestCase({
+
+                name : "item() Tests",
+
+                setUp: function(){
+                    this.list = new LinkedList();
+                    this.list.add("Hi");
+                    this.list.add("Yo");
+                    this.list.add("Bye");
+                },
+
+                tearDown: function(){
+                    delete this.list;
+                },
 
 
             })
