@@ -102,6 +102,26 @@
                     var value = this.list.item(5);
                     assert.isNull(value, "Invalid items should return null.");
                 },
+            }));
+
+            //-------------------------------------------------------------------------
+            // Test Case for removing values
+            //-------------------------------------------------------------------------
+
+            suite.add(new YAHOO.tool.TestCase({
+
+                name : "remove() Tests",
+
+                setUp: function(){
+                    this.list = new LinkedList();
+                    this.list.add("Hi");
+                    this.list.add("Yo");
+                    this.list.add("Bye");
+                },
+
+                tearDown: function(){
+                    delete this.list;
+                },
 
 
             })
