@@ -154,6 +154,21 @@
                     assert.isNull(this.list.item(2), "Item in position 2 should be null.");
                 }
             }));
+            //-------------------------------------------------------------------------
+            // Test Case for converting to an array
+            //-------------------------------------------------------------------------
+
+            suite.add(new YAHOO.tool.TestCase({
+
+                name : "toArray() Tests",
+
+                setUp: function(){
+                    this.list = new LinkedList();
+                },
+
+                tearDown: function(){
+                    delete this.list;
+                },
 
 
             })
