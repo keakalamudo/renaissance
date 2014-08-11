@@ -123,6 +123,38 @@
                     delete this.list;
                 },
 
+                //---------------------------------------------------------------------
+                // Tests
+                //---------------------------------------------------------------------
+
+                testRemoveFirstItem: function(){
+                    var value = this.list.remove(0);
+                    assert.areEqual("Hi", value, "Removed item should be 'Hi'.");
+                    assert.areEqual(2, this.list.size(), "There should only be two items left.");
+                    assert.areEqual("Yo", this.list.item(0), "First item should now be 'Yo'.");
+                    assert.areEqual("Bye", this.list.item(1), "Last item should now be 'Bye'.");
+                    assert.isNull(this.list.item(2), "Item in position 2 should be null.");
+                },
+
+                testRemoveMiddleItem: function(){
+                    var value = this.list.remove(1);
+                    assert.areEqual("Yo", value, "Removed item should be 'Yo'.");
+                    assert.areEqual(2, this.list.size(), "There should only be two items left.");
+                    assert.areEqual("Hi", this.list.item(0), "First item should now be 'Yo'.");
+                    assert.areEqual("Bye", this.list.item(1), "Last item should now be 'Bye'.");
+                    assert.isNull(this.list.item(2), "Item in position 2 should be null.");
+                },
+
+                testRemoveLastItem: function(){
+                    var value = this.list.remove(2);
+                    assert.areEqual("Bye", value, "Removed item should be 'Bye'.");
+                    assert.areEqual(2, this.list.size(), "There should only be two items left.");
+                    assert.areEqual("Hi", this.list.item(0), "First item should now be 'Hi'.");
+                    assert.areEqual("Yo", this.list.item(1), "Last item should now be 'Yo'.");
+                    assert.isNull(this.list.item(2), "Item in position 2 should be null.");
+                }
+            }));
+
 
             })
 
