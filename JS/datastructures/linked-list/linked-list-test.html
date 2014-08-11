@@ -79,6 +79,30 @@
                     delete this.list;
                 },
 
+                //---------------------------------------------------------------------
+                // Tests
+                //---------------------------------------------------------------------
+
+                testGetFirstItem: function(){
+                    var value = this.list.item(0);
+                    assert.areEqual("Hi", value, "First item should be 'Hi'.");
+                },
+
+                testGetMiddleItem: function(){
+                    var value = this.list.item(1);
+                    assert.areEqual("Yo", value, "Second item should be 'Yo'.");
+                },
+
+                testGetLastItem: function(){
+                    var value = this.list.item(2);
+                    assert.areEqual("Bye", value, "Second item should be 'Bye'.");
+                },
+
+                testGetInvalidItem: function(){
+                    var value = this.list.item(5);
+                    assert.isNull(value, "Invalid items should return null.");
+                },
+
 
             })
 
