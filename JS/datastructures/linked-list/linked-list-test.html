@@ -203,10 +203,15 @@
             //return it
             return suite;
 
+        })();(function (){
+            //create the logger
+            var logger = new YAHOO.tool.TestLogger();
+
+            //add the tests
+            YAHOO.tool.TestRunner.add(YAHOO.test.LinkedList);
+            YAHOO.tool.TestRunner.run();
+
         })();
-
-
-            })
 
 
     </script>
