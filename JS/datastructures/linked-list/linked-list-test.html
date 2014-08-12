@@ -169,6 +169,41 @@
                 tearDown: function(){
                     delete this.list;
                 },
+                //---------------------------------------------------------------------
+                // Tests
+                //---------------------------------------------------------------------
+
+                testToArrayForEmptyList: function(){
+                    var value = this.list.toArray();
+                    assert.isInstanceOf(Array, value, "Value should be an array.");
+                    assert.areEqual(0, value.length, "Array should be empty.");
+                },
+
+                testToArrayForOneItemList: function(){
+                    this.list.add("Hi");
+                    var value = this.list.toArray();
+                    assert.isInstanceOf(Array, value, "Value should be an array.");
+                    assert.areEqual(1, value.length, "Array should have 1 item.");
+                    assert.areEqual("Hi", value[0], "The only item should be 'Hi'.");
+                },
+
+                testToArrayForTwoItemList: function(){
+                    this.list.add("Hi");
+                    this.list.add("Yo");
+                    var value = this.list.toArray();
+                    assert.isInstanceOf(Array, value, "Value should be an array.");
+                    assert.areEqual(2, value.length, "Array should have 2 items.");
+                    assert.areEqual("Hi", value[0], "The first item should be 'Hi'.");
+                    assert.areEqual("Yo", value[1], "The second item should be 'Yo'.");
+                }
+
+
+            }));
+
+            //return it
+            return suite;
+
+        })();
 
 
             })
