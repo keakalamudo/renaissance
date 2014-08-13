@@ -40,19 +40,24 @@ function swap (items, firstindex, secondindex){
 }
 
 function partition(items, left, right){
-    var pivot = items[Math.floor((right+left)/2)],
-        i = left,
-        j = right
+    var pivot = items[Math.floor((right+left)/2)], //This is the middle value
+        i = left, // i starts from the left and goes right to pivot index.
+        j = right // j starts from the right and goes left to pivot index
 
+    //While the two indices do not match.
     while(i<=j){
+        //if the elememt is less than the pivot, move right
         while(items[i] < pivot){
             i++;
         }
+        //if the element is greater than the pivot, move left
         while(items[i] > pivot){
             j--;
         }
+        //if the two indices still do not match, swap them
         if(i<=j){
             swap(items,i,j);
+            //change indices to continue the loop
             i++;
             j--;
         }
@@ -62,6 +67,8 @@ function partition(items, left, right){
 
 function quicksort(items, left, right){
     var index;
-    
+    if(items.left > 1){
+
+    }
 
 }
