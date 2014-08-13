@@ -34,5 +34,7 @@
 
 function swap (items, firstindex, secondindex){
     var temp = items[firstindex];
-    
+    items[firstindex] = items[secondindex];
+    items[secondindex] = temp;
+
 }
