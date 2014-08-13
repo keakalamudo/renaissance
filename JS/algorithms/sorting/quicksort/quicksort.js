@@ -64,11 +64,33 @@ function partition(items, left, right){
     }
     return i;
 }
+/**
+ * Quicksort implementation in JavaScript. The array will be sorted in place.
+ * @param {Array} items An array of items to sort.
+ * @return {Array} The sorted array.
+ */
 
 function quicksort(items, left, right){
     var index;
-    if(items.left > 1){
+
+    //Test -- Do not sort an array with zero or one element.
+    if(items.length > 1){
+
+        // fix left and right values - might not be provided
+        left = typeof left != "number" ? 0 : left;
+        right = typeof right != "number" ? items.length - 1 : right;
+
+        //split up the entire array.
+        index = partition(items, left, right);
+
+        //if the index returned.
+        if (left < index -  1 ){
+            quicksort(items, left, index -1);
+        }
+        if (index < right){
+            quicksort(items, index, right);
+        }
 
     }
-
+    return items;
 }
