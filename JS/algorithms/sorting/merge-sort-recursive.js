@@ -19,5 +19,4 @@ function merge(left, right){
         }
     }
 
-    return result.concat(left.slice(il)).concat(right.slice(ir));
 }
